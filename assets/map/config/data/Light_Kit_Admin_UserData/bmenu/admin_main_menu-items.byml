@@ -8,16 +8,17 @@ user:
         text: User File Manager
         route: lka_route-user_file_manager
         children: []
-        _right: Light_Kit_Admin.user
+        _right: Light_UserData.user
 
 
 # The admin items will be appended to the "admin" menu of Light_Kit_Admin
 admin:
     -
         id: lka_userdata-luda
-        icon: fas fa-bars
+        icon: fas fa-puzzle-piece
         text: UserData
         route: null
+        _right: Light_UserData.admin
         children:
             -
                 id: lka_userdata-luda_resource
@@ -28,7 +29,7 @@ admin:
                     plugin: Light_Kit_Admin_UserData
                     controller: Generated/LudaResourceController
 
-                _right: Light_UserData.user
+                _right: Light_UserData.admin
                 children: []
 
             -
@@ -40,7 +41,7 @@ admin:
                     plugin: Light_Kit_Admin_UserData
                     controller: Generated/LudaResourceHasTagController
 
-                _right: Light_UserData.user
+                _right: Light_UserData.admin
                 children: []
 
             -
@@ -52,6 +53,6 @@ admin:
                     plugin: Light_Kit_Admin_UserData
                     controller: Generated/LudaTagController
 
-                _right: Light_UserData.user
+                _right: Light_UserData.admin
                 children: []
 

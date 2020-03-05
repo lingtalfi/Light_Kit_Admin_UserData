@@ -1,5 +1,5 @@
 default: 
-    table: luda_tag
+    table: luda_tag t
     ric: 
         - id
     
@@ -46,6 +46,7 @@ default:
         value: REALIST(Light_Realist, csrf_token, realist-request)
     
     use_micro_permission: true
+    row_restriction_mode: strict
     rendering: 
         title: Tag list
         list_general_actions: 

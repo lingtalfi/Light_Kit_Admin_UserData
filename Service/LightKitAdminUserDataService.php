@@ -98,6 +98,10 @@ class LightKitAdminUserDataService implements PluginInstallerInterface, BMenuDir
                 "name" => "Light_Kit_Admin.user",
             ], true);
 
+            $permAdminId = $pi->fetchRowColumn("lud_permission", "id", [
+                "name" => "Light_UserData.admin",
+            ], true);
+
             $permId = $pi->fetchRowColumn("lud_permission", "id", [
                 "name" => "Light_UserData.user",
             ], true);
@@ -106,6 +110,12 @@ class LightKitAdminUserDataService implements PluginInstallerInterface, BMenuDir
             $userDb->getPermissionGroupHasPermissionApi()->insertPermissionGroupHasPermission([
                 "permission_group_id" => $groupAdminId,
                 "permission_id" => $permId,
+            ]);
+
+
+            $userDb->getPermissionGroupHasPermissionApi()->insertPermissionGroupHasPermission([
+                "permission_group_id" => $groupAdminId,
+                "permission_id" => $permAdminId,
             ]);
 
             $userDb->getPermissionGroupHasPermissionApi()->insertPermissionGroupHasPermission([
@@ -161,12 +171,24 @@ class LightKitAdminUserDataService implements PluginInstallerInterface, BMenuDir
                 "name" => "Light_Kit_Admin.user",
             ], true);
 
+            $groupAdminId = $pi->fetchRowColumn("lud_permission_group", "id", [
+                "name" => "Light_Kit_Admin.admin",
+            ], true);
+
+
             $permId = $pi->fetchRowColumn("lud_permission", "id", [
                 "name" => "Light_UserData.user",
             ], true);
 
+            $permAdminId = $pi->fetchRowColumn("lud_permission", "id", [
+                "name" => "Light_UserData.admin",
+            ], true);
+
 
             $userDb->getPermissionGroupHasPermissionApi()->deletePermissionGroupHasPermissionByPermissionGroupIdAndPermissionId($groupId, $permId);
+
+            $userDb->getPermissionGroupHasPermissionApi()->deletePermissionGroupHasPermissionByPermissionGroupIdAndPermissionId($groupAdminId, $permId);
+            $userDb->getPermissionGroupHasPermissionApi()->deletePermissionGroupHasPermissionByPermissionGroupIdAndPermissionId($groupAdminId, $permAdminId);
 
 
         }, $exception);

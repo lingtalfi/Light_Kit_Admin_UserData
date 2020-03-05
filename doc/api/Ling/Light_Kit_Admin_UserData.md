@@ -1,6 +1,6 @@
 Ling/Light_Kit_Admin_UserData
 ================
-2020-02-28 --> 2020-02-28
+2020-02-28 --> 2020-03-05
 
 
 
@@ -71,6 +71,7 @@ Dependencies
 - [Light_Kit_Admin](https://github.com/lingtalfi/Light_Kit_Admin)
 - [Light_Realform](https://github.com/lingtalfi/Light_Realform)
 - [Light_Kit](https://github.com/lingtalfi/Light_Kit)
+- [Light_UserRowRestriction](https://github.com/lingtalfi/Light_UserRowRestriction)
 - [Light_ControllerHub](https://github.com/lingtalfi/Light_ControllerHub)
 - [BabyYaml](https://github.com/lingtalfi/BabyYaml)
 - [Light_BMenu](https://github.com/lingtalfi/Light_BMenu)

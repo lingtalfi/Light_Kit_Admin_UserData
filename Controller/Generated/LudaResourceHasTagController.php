@@ -6,6 +6,7 @@ namespace Ling\Light_Kit_Admin_UserData\Controller\Generated;
 
 use Ling\Light\Http\HttpResponseInterface;
 use Ling\Light_Kit\PageConfigurationUpdator\PageConfUpdator;
+use Ling\Light_UserRowRestriction\Service\LightUserRowRestrictionService;
 use Ling\Light_Kit_Admin_UserData\Controller\Generated\Base\RealGenController;
 
 
@@ -52,7 +53,7 @@ class LudaResourceHasTagController extends RealGenController
             $this->setOnSuccessIframeSignal("done");
         }
 
-
+        LightUserRowRestrictionService::$mode = LightUserRowRestrictionService::MODE_STRICT;
         $form = $this->processForm($identifier, $table);
 
 

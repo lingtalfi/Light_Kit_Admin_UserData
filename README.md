@@ -1,6 +1,6 @@
 Light_Kit_Admin_UserData
 ===========
-2020-02-28
+2020-02-28 -> 2020-03-05
 
 
 
@@ -173,6 +173,10 @@ $realist.methods_collection:
 History Log
 =============
 
+- 1.1.0 -- 2020-03-05
+
+    - change kit admin generator config to take into account user row restriction
+    
 - 1.0.0 -- 2020-02-28
 
     - initial commit
