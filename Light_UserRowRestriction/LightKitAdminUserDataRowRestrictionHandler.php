@@ -7,7 +7,7 @@ namespace Ling\Light_Kit_Admin_UserData\Light_UserRowRestriction;
 use Ling\Light\ServiceContainer\LightServiceContainerInterface;
 use Ling\Light_Kit_Admin_UserData\Exception\LightKitAdminUserDataException;
 use Ling\Light_User\LightUserInterface;
-use Ling\Light_User\WebsiteLightUser;
+use Ling\Light_User\LightWebsiteUser;
 use Ling\Light_UserRowRestriction\RowRestrictionHandler\RowRestrictionHandlerInterface;
 
 /**
@@ -55,7 +55,7 @@ class LightKitAdminUserDataRowRestrictionHandler implements RowRestrictionHandle
     public function checkRestriction(LightUserInterface $user, string $table, ...$args)
     {
         /**
-         * @var $user WebsiteLightUser
+         * @var $user LightWebsiteUser
          */
         if (true === $user->hasRight("Light_UserData.admin")) { // our admin can do anything
             return;
@@ -83,15 +83,15 @@ class LightKitAdminUserDataRowRestrictionHandler implements RowRestrictionHandle
     //
     //--------------------------------------------
     /**
-     * Checks that the given user is a valid WebsiteLightUser, and throws an exception if that's not the case.
+     * Checks that the given user is a valid LightWebsiteUser, and throws an exception if that's not the case.
      *
      * @param LightUserInterface $user
      * @throws \Exception
      */
     protected function checkValidWebsiteUser(LightUserInterface $user)
     {
-        if (false === $user instanceof WebsiteLightUser) {
-            $this->error("Incorrect user, we only treat WebsiteLightUser users for now.");
+        if (false === $user instanceof LightWebsiteUser) {
+            $this->error("Incorrect user, we only treat LightWebsiteUser users for now.");
         }
         if (false === $user->isValid()) {
             $this->error("Invalid user, the user is not connected.");

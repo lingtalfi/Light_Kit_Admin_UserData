@@ -88,6 +88,7 @@ class LightKitAdminUserDataService implements PluginInstallerInterface, BMenuDir
          * @var $exception \Exception
          */
         $exception = null;
+        $pi->debugLog("kit_admin_user_data: adding tables content.");
         $res = $db->transaction(function () use ($pi, $userDb) {
 
             $groupAdminId = $pi->fetchRowColumn("lud_permission_group", "id", [
@@ -196,6 +197,46 @@ class LightKitAdminUserDataService implements PluginInstallerInterface, BMenuDir
         if (false === $res) {
             throw $exception;
         }
+    }
+
+
+    /**
+     * @implementation
+     */
+    public function isInstalled(): bool
+    {
+        /**
+         * @var $installer LightPluginInstallerService
+         */
+        $installer = $this->container->get("plugin_installer");
+        if (
+            true === $installer->hasTable("lud_permission_group") &&
+            true === $installer->hasTable("lud_permission_group_has_permission")
+        ) {
+
+
+            if (false !== (
+                $permAdminId = $installer->fetchRowColumn("lud_permission", "id", [
+                    "name" => "Light_UserData.admin",
+                ]))) {
+
+
+                if (false !== ($groupAdminId = $installer->fetchRowColumn("lud_permission_group", "id", [
+                        "name" => "Light_Kit_Admin.admin",
+                    ]))) {
+
+                    if (
+                        false !== $installer->fetchRowColumn("lud_permission_group_has_permission", "permission_group_id", [
+                            "permission_group_id" => $groupAdminId,
+                            "permission_id" => $permAdminId,
+                        ])
+                    ) {
+                        return true;
+                    }
+                }
+            }
+        }
+        return false;
     }
 
 
