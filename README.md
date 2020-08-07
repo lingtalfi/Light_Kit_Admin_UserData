@@ -1,6 +1,6 @@
 Light_Kit_Admin_UserData
 ===========
-2020-02-28 -> 2020-06-23
+2020-02-28 -> 2020-08-07
 
 
 
@@ -98,6 +98,13 @@ $crud.methods_collection:
                 instance: Ling\Light_Kit_Admin\Crud\CrudRequestHandler\LightKitAdminCrudRequestHandler
 
 
+$easy_route.methods_collection:
+    -
+        method: registerBundleFile
+        args:
+            file: config/data/Light_Kit_Admin_UserData/Light_EasyRoute/lka_userdata_routes.byml
+
+
 $kit_admin.methods_collection:
     -
         method: registerPlugin
@@ -136,36 +143,6 @@ $realform.methods_collection:
                         dir: ${app_dir}/config/data/Light_Kit_Admin_UserData/Light_Realform
 
 
-$realist.methods_collection:
-    -
-        method: registerListRenderer
-        args:
-            identifier: Light_Kit_Admin_UserData
-            renderer:
-                instance: Ling\Light_Kit_Admin\Realist\Rendering\LightKitAdminRealistListRenderer
-    -
-        method: registerRealistRowsRenderer
-        args:
-            identifier: Light_Kit_Admin_UserData
-            renderer:
-                instance: Ling\Light_Kit_Admin\Realist\Rendering\LightKitAdminRealistRowsRenderer
-    -
-        method: registerActionHandler
-        args:
-            renderer:
-                instance: Ling\Light_Kit_Admin\Realist\ActionHandler\LightKitAdminRealistActionHandler
-    -
-        method: registerListActionHandler
-        args:
-            plugin: Light_Kit_Admin_UserData
-            renderer:
-                instance: Ling\Light_Kit_Admin\Realist\ListActionHandler\LightKitAdminListActionHandler
-    -
-        method: registerListGeneralActionHandler
-        args:
-            plugin: Light_Kit_Admin_UserData
-            renderer:
-                instance: Ling\Light_Kit_Admin\Realist\ListGeneralActionHandler\LightKitAdminListGeneralActionHandler
 
 
 $user_row_restriction.methods_collection:
@@ -186,6 +163,10 @@ $user_row_restriction.methods_collection:
 History Log
 =============
 
+- 1.4.0 -- 2020-08-07
+
+    - update service to adapt realist late registration
+    
 - 1.3.0 -- 2020-06-23
 
     - update service to adapt new plugin installer service

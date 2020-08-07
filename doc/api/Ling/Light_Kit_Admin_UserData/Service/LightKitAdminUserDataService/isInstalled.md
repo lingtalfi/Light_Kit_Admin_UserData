@@ -47,7 +47,7 @@ Returns bool.
 
 Source Code
 ===========
-See the source code for method [LightKitAdminUserDataService::isInstalled](https://github.com/lingtalfi/Light_Kit_Admin_UserData/blob/master/Service/LightKitAdminUserDataService.php#L206-L240)
+See the source code for method [LightKitAdminUserDataService::isInstalled](https://github.com/lingtalfi/Light_Kit_Admin_UserData/blob/master/Service/LightKitAdminUserDataService.php#L214-L248)
 
 
 See Also
