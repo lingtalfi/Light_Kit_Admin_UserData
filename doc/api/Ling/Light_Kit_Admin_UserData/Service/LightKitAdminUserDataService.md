@@ -35,7 +35,7 @@ class <span class="pl-k">LightKitAdminUserDataService</span> implements [PluginI
     - public [isInstalled](https://github.com/lingtalfi/Light_Kit_Admin_UserData/blob/master/doc/api/Ling/Light_Kit_Admin_UserData/Service/LightKitAdminUserDataService/isInstalled.md)() : bool
     - public [getDependencies](https://github.com/lingtalfi/Light_Kit_Admin_UserData/blob/master/doc/api/Ling/Light_Kit_Admin_UserData/Service/LightKitAdminUserDataService/getDependencies.md)() : array
     - public [inject](https://github.com/lingtalfi/Light_Kit_Admin_UserData/blob/master/doc/api/Ling/Light_Kit_Admin_UserData/Service/LightKitAdminUserDataService/inject.md)(string $menuStructureId, Ling\Light_BMenu\Menu\LightBMenu $menu) : void
-    - public [registerByRequestId](https://github.com/lingtalfi/Light_Kit_Admin_UserData/blob/master/doc/api/Ling/Light_Kit_Admin_UserData/Service/LightKitAdminUserDataService/registerByRequestId.md)(string $requestId) : mixed
+    - public [registerRealistByRequestId](https://github.com/lingtalfi/Light_Kit_Admin_UserData/blob/master/doc/api/Ling/Light_Kit_Admin_UserData/Service/LightKitAdminUserDataService/registerRealistByRequestId.md)(string $requestId) : mixed
 
 }
 
@@ -63,7 +63,7 @@ Methods
 - [LightKitAdminUserDataService::isInstalled](https://github.com/lingtalfi/Light_Kit_Admin_UserData/blob/master/doc/api/Ling/Light_Kit_Admin_UserData/Service/LightKitAdminUserDataService/isInstalled.md) &ndash; Returns whether the core install phase of the plugin is fully completed.
 - [LightKitAdminUserDataService::getDependencies](https://github.com/lingtalfi/Light_Kit_Admin_UserData/blob/master/doc/api/Ling/Light_Kit_Admin_UserData/Service/LightKitAdminUserDataService/getDependencies.md) &ndash; Returns the array of dependencies.
 - [LightKitAdminUserDataService::inject](https://github.com/lingtalfi/Light_Kit_Admin_UserData/blob/master/doc/api/Ling/Light_Kit_Admin_UserData/Service/LightKitAdminUserDataService/inject.md) &ndash; Injects menu fragments in the given menu, knowing the "menuStructureId" context.
-- [LightKitAdminUserDataService::registerByRequestId](https://github.com/lingtalfi/Light_Kit_Admin_UserData/blob/master/doc/api/Ling/Light_Kit_Admin_UserData/Service/LightKitAdminUserDataService/registerByRequestId.md) &ndash; Registers the plugin to the realist service.
+- [LightKitAdminUserDataService::registerRealistByRequestId](https://github.com/lingtalfi/Light_Kit_Admin_UserData/blob/master/doc/api/Ling/Light_Kit_Admin_UserData/Service/LightKitAdminUserDataService/registerRealistByRequestId.md) &ndash; Registers the plugin to the realist service.
 
 
 

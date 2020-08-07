@@ -47,114 +47,66 @@ This plugin provides the following services:
 Here is an example of the service configuration:
 
 ```yaml
-kit_admin_user_data:
-    instance: Ling\Light_Kit_Admin_UserData\Service\LightKitAdminUserDataService
+user_data:
+    instance: Ling\Light_UserData\Service\LightUserDataService
     methods:
         setContainer:
             container: @container()
-            
+        setObfuscationParams:
+            algo: default
+            secret: P0zeg7e,4dD
+        setRootDir:
+            dir: ${app_dir}/user-data
+
+
+
 # --------------------------------------
 # hooks
 # --------------------------------------
-$bmenu.methods_collection:
-    -
-        method: addDirectInjector
-        args:
-            menuType: admin_main_menu
-            injector: @service(kit_admin_user_data)
-
-$chloroform_extension.methods_collection:
-    -
-        method: registerTableListConfigurationHandler
-        args:
-            plugin: Light_Kit_Admin_UserData
-            handler:
-                instance: Ling\Light_Kit_Admin\ChloroformExtension\LightKitAdminTableListConfigurationHandler
-                methods:
-                    setConfigurationFile:
-                        files:
-                            - ${app_dir}/config/data/Light_Kit_Admin_UserData/Light_ChloroformExtension/generated/lka_userdata.table_list.byml
-#                            - ${app_dir}/config/data/Light_Kit_Admin_UserData/Light_ChloroformExtension/table_list.byml
-
-
-$controller_hub.methods_collection:
+$ajax_handler.methods_collection:
     -
         method: registerHandler
         args:
-            plugin: Light_Kit_Admin_UserData
+            id: Light_UserData
             handler:
-                instance: Ling\Light_Kit_Admin_UserData\ControllerHub\LightKitAdminUserDataControllerHubHandler
-                methods:
-                    setContainer:
-                        container: @container()
+                instance: Ling\Light_UserData\AjaxHandler\LightUserDataAjaxHandler
 
 
-$crud.methods_collection:
+$breeze_generator.methods_collection:
     -
-        method: registerHandler
+        method: addConfigurationEntryByFile
         args:
-            pluginId: Light_Kit_Admin_UserData
-            handler:
-                instance: Ling\Light_Kit_Admin\Crud\CrudRequestHandler\LightKitAdminCrudRequestHandler
+            key: luda
+            file: ${app_dir}/config/data/Light_UserData/Light_BreezeGenerator/luda.byml
 
 
 $easy_route.methods_collection:
     -
         method: registerBundleFile
         args:
-            file: config/data/Light_Kit_Admin_UserData/Light_EasyRoute/lka_userdata_routes.byml
+            file: config/data/Light_UserData/Light_EasyRoute/luda_routes.byml
 
 
-$kit_admin.methods_collection:
+$events.methods_collection:
     -
-        method: registerPlugin
+        method: registerListener
         args:
-            pluginName: Light_Kit_Admin_UserData
-            plugin:
-                instance: Ling\Light_Kit_Admin_UserData\LightKitAdminPlugin\LightKitAdminUserDataLkaPlugin
-                methods:
-                    setOptionsFile:
-                        file: ${app_dir}/config/data/Light_Kit_Admin_UserData/Light_Kit_Admin/lka-options.byml
+            events: Light_Database.on_lud_user_group_create
+            listener:
+                instance: @service(user_data)
+                callable_method: onUserGroupCreate
 
-
-
-$micro_permission.methods_collection:
-    -
-        method: registerMicroPermissionsByFile
-        args:
-            file: ${app_dir}/config/data/Light_Kit_Admin_UserData/Light_MicroPermission/lka_userdata-micro-permissions.byml
 
 $plugin_installer.methods_collection:
     -
         method: registerPlugin
         args:
-            plugin: Light_Kit_Admin_UserData
-            installer: @service(kit_admin_user_data)
-
-$realform.methods_collection:
-    -
-        method: registerFormHandler
-        args:
-            plugin: Light_Kit_Admin_UserData
-            handler:
-                instance: Ling\Light_Kit_Admin\Realform\Handler\LightKitAdminRealformHandler
-                methods:
-                    setConfDir:
-                        dir: ${app_dir}/config/data/Light_Kit_Admin_UserData/Light_Realform
+            plugin: Light_UserData
+            installer: @service(user_data)
 
 
 
 
-$user_row_restriction.methods_collection:
-    -
-        method: registerRowRestrictionHandlerByTablePrefix
-        args:
-            prefix: luda
-            handler:
-                instance: Ling\Light_Kit_Admin_UserData\Light_UserRowRestriction\LightKitAdminUserDataRowRestrictionHandler
-                methods:
-                    setContainer:
-                        container: @container()
 
 ```
 
@@ -163,6 +115,10 @@ $user_row_restriction.methods_collection:
 History Log
 =============
 
+- 1.5.0 -- 2020-08-07
+
+    - update service to adapt realform late registration
+    
 - 1.4.0 -- 2020-08-07
 
     - update service to adapt realist late registration

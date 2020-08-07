@@ -294,7 +294,7 @@ class LightKitAdminUserDataService implements PluginInstallerInterface, BMenuDir
     /**
      * @implementation
      */
-    public function registerByRequestId(string $requestId)
+    public function registerRealistByRequestId(string $requestId)
     {
 
         list($galaxy, $planet) = PlanetTool::getGalaxyPlanetByClassName(get_class($this));
