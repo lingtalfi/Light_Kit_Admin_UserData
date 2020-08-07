@@ -52,7 +52,7 @@ Returns mixed.
 
 Source Code
 ===========
-See the source code for method [LightKitAdminUserDataService::registerRealistByRequestId](https://github.com/lingtalfi/Light_Kit_Admin_UserData/blob/master/Service/LightKitAdminUserDataService.php#L297-L311)
+See the source code for method [LightKitAdminUserDataService::registerRealistByRequestId](https://github.com/lingtalfi/Light_Kit_Admin_UserData/blob/master/Service/LightKitAdminUserDataService.php#L299-L313)
 
 
 See Also
@@ -60,5 +60,5 @@ See Also
 
 The [LightKitAdminUserDataService](https://github.com/lingtalfi/Light_Kit_Admin_UserData/blob/master/doc/api/Ling/Light_Kit_Admin_UserData/Service/LightKitAdminUserDataService.md) class.
 
-Previous method: [inject](https://github.com/lingtalfi/Light_Kit_Admin_UserData/blob/master/doc/api/Ling/Light_Kit_Admin_UserData/Service/LightKitAdminUserDataService/inject.md)<br>
+Previous method: [inject](https://github.com/lingtalfi/Light_Kit_Admin_UserData/blob/master/doc/api/Ling/Light_Kit_Admin_UserData/Service/LightKitAdminUserDataService/inject.md)<br>Next method: [registerRealformByIdentifier](https://github.com/lingtalfi/Light_Kit_Admin_UserData/blob/master/doc/api/Ling/Light_Kit_Admin_UserData/Service/LightKitAdminUserDataService/registerRealformByIdentifier.md)<br>
 

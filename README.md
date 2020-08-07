@@ -115,6 +115,10 @@ $plugin_installer.methods_collection:
 History Log
 =============
 
+- 1.5.1 -- 2020-08-07
+
+    - update service to adapt realform late registration (forgot implementation last commit)
+
 - 1.5.0 -- 2020-08-07
 
     - update service to adapt realform late registration

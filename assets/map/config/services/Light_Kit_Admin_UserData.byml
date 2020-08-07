@@ -82,17 +82,17 @@ $plugin_installer.methods_collection:
             plugin: Light_Kit_Admin_UserData
             installer: @service(kit_admin_user_data)
 
-$realform.methods_collection:
-    -
-        method: registerFormHandler
-        args:
-            plugin: Light_Kit_Admin_UserData
-            handler:
-                instance: Ling\Light_Kit_Admin\Realform\Handler\LightKitAdminRealformHandler
-                methods:
-                    setConfDir:
-                        dir: ${app_dir}/config/data/Light_Kit_Admin_UserData/Light_Realform
-
+#$realform.methods_collection:
+#    -
+#        method: registerFormHandler
+#        args:
+#            plugin: Light_Kit_Admin_UserData
+#            handler:
+#                instance: Ling\Light_Kit_Admin\Realform\Handler\LightKitAdminRealformHandler
+#                methods:
+#                    setConfDir:
+#                        dir: ${app_dir}/config/data/Light_Kit_Admin_UserData/Light_Realform
+#
 
 
 

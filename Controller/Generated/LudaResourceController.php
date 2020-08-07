@@ -43,6 +43,9 @@ class LudaResourceController extends RealGenController
 
         $table = "luda_resource";
         $identifier = "Light_Kit_Admin_UserData.generated/luda_resource";
+
+        $this->lateRealFormRegistration($identifier);
+
         $parentLayout = "Light_Kit_Admin/kit/zeroadmin/dev/mainlayout_base";
         $vars = [
             "title" => "Resource form",

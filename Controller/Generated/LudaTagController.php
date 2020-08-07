@@ -43,6 +43,9 @@ class LudaTagController extends RealGenController
 
         $table = "luda_tag";
         $identifier = "Light_Kit_Admin_UserData.generated/luda_tag";
+
+        $this->lateRealFormRegistration($identifier);
+
         $parentLayout = "Light_Kit_Admin/kit/zeroadmin/dev/mainlayout_base";
         $vars = [
             "title" => "Tag form",

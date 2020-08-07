@@ -43,6 +43,9 @@ class LudaResourceHasTagController extends RealGenController
 
         $table = "luda_resource_has_tag";
         $identifier = "Light_Kit_Admin_UserData.generated/luda_resource_has_tag";
+
+        $this->lateRealFormRegistration($identifier);
+
         $parentLayout = "Light_Kit_Admin/kit/zeroadmin/dev/mainlayout_base";
         $vars = [
             "title" => "Resource has tag form",
