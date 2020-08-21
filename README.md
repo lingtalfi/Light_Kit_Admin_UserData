@@ -1,6 +1,6 @@
 Light_Kit_Admin_UserData
 ===========
-2020-02-28 -> 2020-08-07
+2020-02-28 -> 2020-08-21
 
 
 
@@ -115,6 +115,10 @@ $plugin_installer.methods_collection:
 History Log
 =============
 
+- 1.6.0 -- 2020-08-21
+
+    - update api to work with micro-permission3
+    
 - 1.5.1 -- 2020-08-07
 
     - update service to adapt realform late registration (forgot implementation last commit)
