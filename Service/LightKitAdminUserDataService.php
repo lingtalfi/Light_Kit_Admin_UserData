@@ -8,25 +8,15 @@ use Ling\BabyYaml\BabyYamlUtil;
 use Ling\Light\ServiceContainer\LightServiceContainerInterface;
 use Ling\Light_BMenu\DirectInjection\BMenuDirectInjectorInterface;
 use Ling\Light_BMenu\Menu\LightBMenu;
-use Ling\Light_Kit_Admin\Realform\Handler\LightKitAdminRealformHandler;
-use Ling\Light_Kit_Admin\Realist\ActionHandler\LightKitAdminRealistActionHandler;
-use Ling\Light_Kit_Admin\Realist\ListActionHandler\LightKitAdminListActionHandler;
-use Ling\Light_Kit_Admin\Realist\ListGeneralActionHandler\LightKitAdminListGeneralActionHandler;
-use Ling\Light_Kit_Admin\Realist\Rendering\LightKitAdminRealistListRenderer;
-use Ling\Light_Kit_Admin\Realist\Rendering\LightKitAdminRealistRowsRenderer;
 use Ling\Light_PluginInstaller\PluginInstaller\PluginInstallerInterface;
 use Ling\Light_PluginInstaller\Service\LightPluginInstallerService;
-use Ling\Light_Realform\Service\LightRealformLateServiceRegistrationInterface;
-use Ling\Light_Realist\Service\LightRealistCustomServiceInterface;
-use Ling\Light_Realist\Service\LightRealistService;
 use Ling\Light_UserDatabase\Service\LightUserDatabaseService;
 use Ling\SimplePdoWrapper\SimplePdoWrapperInterface;
-use Ling\UniverseTools\PlanetTool;
 
 /**
  * The LightKitAdminUserDataService class.
  */
-class LightKitAdminUserDataService implements PluginInstallerInterface, BMenuDirectInjectorInterface, LightRealistCustomServiceInterface, LightRealformLateServiceRegistrationInterface
+class LightKitAdminUserDataService implements PluginInstallerInterface, BMenuDirectInjectorInterface
 {
 
 
@@ -196,10 +186,11 @@ class LightKitAdminUserDataService implements PluginInstallerInterface, BMenuDir
             ], true);
 
 
-            $userDb->getPermissionGroupHasPermissionApi()->deletePermissionGroupHasPermissionByPermissionGroupIdAndPermissionId($groupId, $permId);
+            $api = $userDb->getFactory()->getPermissionGroupHasPermissionApi();
+            $api->deletePermissionGroupHasPermissionByPermissionGroupIdAndPermissionId($groupId, $permId);
 
-            $userDb->getPermissionGroupHasPermissionApi()->deletePermissionGroupHasPermissionByPermissionGroupIdAndPermissionId($groupAdminId, $permId);
-            $userDb->getPermissionGroupHasPermissionApi()->deletePermissionGroupHasPermissionByPermissionGroupIdAndPermissionId($groupAdminId, $permAdminId);
+            $api->deletePermissionGroupHasPermissionByPermissionGroupIdAndPermissionId($groupAdminId, $permId);
+            $api->deletePermissionGroupHasPermissionByPermissionGroupIdAndPermissionId($groupAdminId, $permAdminId);
 
 
         }, $exception);
@@ -262,7 +253,7 @@ class LightKitAdminUserDataService implements PluginInstallerInterface, BMenuDir
     }
 
     //--------------------------------------------
-    // BMENU
+    // BMenuDirectInjectorInterface
     //--------------------------------------------
     /**
      * @implementation
@@ -290,43 +281,5 @@ class LightKitAdminUserDataService implements PluginInstallerInterface, BMenuDir
 
     }
 
-    //--------------------------------------------
-    // LightRealistCustomServiceInterface
-    //--------------------------------------------
-    /**
-     * @implementation
-     */
-    public function registerRealistByRequestId(string $requestId)
-    {
-
-        list($galaxy, $planet) = PlanetTool::getGalaxyPlanetByClassName(get_class($this));
-
-        /**
-         * @var $realist LightRealistService
-         */
-        $realist = $this->container->get("realist");
-        $realist->registerListRenderer($planet, new LightKitAdminRealistListRenderer());
-        $realist->registerRealistRowsRenderer($planet, new LightKitAdminRealistRowsRenderer());
-        $realist->registerActionHandler(new LightKitAdminRealistActionHandler());
-        $realist->registerListActionHandler($planet, new LightKitAdminListActionHandler());
-        $realist->registerListGeneralActionHandler($planet, new LightKitAdminListGeneralActionHandler());
-    }
-
-
-    //--------------------------------------------
-    // LightRealformLateServiceRegistrationInterface
-    //--------------------------------------------
-    /**
-     * @implementation
-     */
-    public function registerRealformByIdentifier(string $identifier)
-    {
-        list($galaxy, $planet) = PlanetTool::getGalaxyPlanetByClassName(get_class($this));
-        $realform = $this->container->get("realform");
-        $o = new LightKitAdminRealformHandler();
-        $app_dir = $this->container->getApplicationDir();
-        $o->setConfDir("${app_dir}/config/data/$planet/Light_Realform");
-        $realform->registerFormHandler($planet, $o);
-    }
 
 }

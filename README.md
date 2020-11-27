@@ -1,6 +1,6 @@
 Light_Kit_Admin_UserData
 ===========
-2020-02-28 -> 2020-08-21
+2020-02-28 -> 2020-11-27
 
 
 
@@ -47,65 +47,129 @@ This plugin provides the following services:
 Here is an example of the service configuration:
 
 ```yaml
-user_data:
-    instance: Ling\Light_UserData\Service\LightUserDataService
-    methods:
-        setContainer:
+kit_admin_user_data: 
+    instance: Ling\Light_Kit_Admin_UserData\Service\LightKitAdminUserDataService
+    methods: 
+        setContainer: 
             container: @container()
-        setObfuscationParams:
-            algo: default
-            secret: P0zeg7e,4dD
-        setRootDir:
-            dir: ${app_dir}/user-data
-
-
+        
+    
 
 # --------------------------------------
 # hooks
 # --------------------------------------
-$ajax_handler.methods_collection:
-    -
+$bmenu.methods_collection: 
+    - 
+        method: addDirectInjector
+        args: 
+            menuType: admin_main_menu
+            injector: @service(kit_admin_user_data)
+        
+    
+#    -
+#        method: addDirectItemsByFileAndParentPath
+#        args:
+#            menu_type: admin_main_menu
+#            file: ${app_dir}/config/data/Light_Kit_Admin_UserData/bmenu/generated/kit_admin_user_data.admin_mainmenu_1.byml
+#            path: lka-admin
+        
+    
+
+#    -
+#        method: addDirectItemsByFileAndParentPath
+#        args:
+#            menu_type: admin_main_menu
+#            file: ${app_dir}/config/data/Light_Kit_Admin_UserData/bmenu/generated/kit_admin_user_data.admin_mainmenu_1.byml
+#            path: lka-admin
+$controller_hub.methods_collection: 
+    - 
         method: registerHandler
-        args:
-            id: Light_UserData
-            handler:
-                instance: Ling\Light_UserData\AjaxHandler\LightUserDataAjaxHandler
+        args: 
+            plugin: Light_Kit_Admin_UserData
+            handler: 
+                instance: Ling\Light_Kit_Admin_UserData\ControllerHub\LightKitAdminUserDataControllerHubHandler
+                methods: 
+                    setContainer: 
+                        container: @container()
+                    
+                
+            
+        
+    
 
-
-$breeze_generator.methods_collection:
-    -
-        method: addConfigurationEntryByFile
-        args:
-            key: luda
-            file: ${app_dir}/config/data/Light_UserData/Light_BreezeGenerator/luda.byml
-
-
-$easy_route.methods_collection:
-    -
+$easy_route.methods_collection: 
+    - 
         method: registerBundleFile
-        args:
-            file: config/data/Light_UserData/Light_EasyRoute/luda_routes.byml
+        args: 
+            file: config/data/Light_Kit_Admin_UserData/Light_EasyRoute/lka_userdata_routes.byml
+        
+    
 
-
-$events.methods_collection:
-    -
-        method: registerListener
-        args:
-            events: Light_Database.on_lud_user_group_create
-            listener:
-                instance: @service(user_data)
-                callable_method: onUserGroupCreate
-
-
-$plugin_installer.methods_collection:
-    -
+$kit_admin.methods_collection: 
+    - 
         method: registerPlugin
-        args:
-            plugin: Light_UserData
-            installer: @service(user_data)
+        args: 
+            pluginName: Light_Kit_Admin_UserData
+            plugin: 
+                instance: Ling\Light_Kit_Admin_UserData\LightKitAdminPlugin\LightKitAdminUserDataLkaPlugin
+                methods: 
+                    setOptionsFile: 
+                        file: ${app_dir}/config/data/Light_Kit_Admin_UserData/Light_Kit_Admin/lka-options.byml
+                    
+                
+            
+        
+    
 
+$micro_permission.methods_collection: 
+    - 
+        method: registerMicroPermissionsByFile
+        args: 
+            file: ${app_dir}/config/data/Light_Kit_Admin_UserData/Light_MicroPermission/lka_userdata-micro-permissions.byml
+        
+    
+    - 
+        method: registerMicroPermissionsByProfile
+        args: 
+            file: ${app_dir}/config/data/Light_Kit_Admin_UserData/Light_MicroPermission/kit_admin_user_data.profile.generated.byml
+        
+    
 
+$plugin_installer.methods_collection: 
+    - 
+        method: registerPlugin
+        args: 
+            plugin: Light_Kit_Admin_UserData
+            installer: @service(kit_admin_user_data)
+        
+    
 
+#$realform.methods_collection:
+#    -
+#        method: registerFormHandler
+#        args:
+#            plugin: Light_Kit_Admin_UserData
+#            handler:
+#                instance: Ling\Light_Kit_Admin\Realform\Handler\LightKitAdminRealformHandler
+#                methods:
+#                    setConfDir:
+#                        dir: ${app_dir}/config/data/Light_Kit_Admin_UserData/Light_Realform
+#
+$user_row_restriction.methods_collection: 
+    - 
+        method: registerRowRestrictionHandlerByTablePrefix
+        args: 
+            prefix: luda
+            handler: 
+                instance: Ling\Light_Kit_Admin_UserData\Light_UserRowRestriction\LightKitAdminUserDataRowRestrictionHandler
+                methods: 
+                    setContainer: 
+                        container: @container()
+                    
+                
+            
+        
+    
 
 
 ```
@@ -115,6 +179,18 @@ $plugin_installer.methods_collection:
 History Log
 =============
 
+- 1.7.2 -- 2020-11-27
+
+    - update to accommodate latest Light_Kit api  
+    
+- 1.7.1 -- 2020-11-23
+
+    - acknowledge use of Light_Nugget api  
+    
+- 1.7.0 -- 2020-08-28
+
+    - acknowledge new Light_Crud api  
+    
 - 1.6.0 -- 2020-08-21
 
     - update api to work with micro-permission3

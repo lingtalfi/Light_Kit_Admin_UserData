@@ -4,7 +4,7 @@
 
 The LightKitAdminUserDataException class
 ================
-2020-02-28 --> 2020-08-21
+2020-02-28 --> 2020-11-27
 
 
 
@@ -54,4 +54,4 @@ See the source code of [Ling\Light_Kit_Admin_UserData\Exception\LightKitAdminUse
 
 SeeAlso
 ==============
-Previous class: [LightKitAdminUserDataControllerHubHandler](https://github.com/lingtalfi/Light_Kit_Admin_UserData/blob/master/doc/api/Ling/Light_Kit_Admin_UserData/ControllerHub/LightKitAdminUserDataControllerHubHandler.md)<br>Next class: [LightKitAdminUserDataLkaPlugin](https://github.com/lingtalfi/Light_Kit_Admin_UserData/blob/master/doc/api/Ling/Light_Kit_Admin_UserData/LightKitAdminPlugin/LightKitAdminUserDataLkaPlugin.md)<br>
+Previous class: [LightKitAdminUserDataControllerHubHandler](https://github.com/lingtalfi/Light_Kit_Admin_UserData/blob/master/doc/api/Ling/Light_Kit_Admin_UserData/ControllerHub/LightKitAdminUserDataControllerHubHandler.md)<br>Next class: [LightKitAdminUserDataLkaPlugin](https://github.com/lingtalfi/Light_Kit_Admin_UserData/blob/master/doc/api/Ling/Light_Kit_Admin_UserData/LightKitAdminPlugin/Generated/LightKitAdminUserDataLkaPlugin.md)<br>
