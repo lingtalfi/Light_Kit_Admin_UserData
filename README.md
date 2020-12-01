@@ -1,6 +1,6 @@
 Light_Kit_Admin_UserData
 ===========
-2020-02-28 -> 2020-11-27
+2020-02-28 -> 2020-12-01
 
 
 
@@ -65,13 +65,7 @@ $bmenu.methods_collection:
             menuType: admin_main_menu
             injector: @service(kit_admin_user_data)
         
-    
-#    -
-#        method: addDirectItemsByFileAndParentPath
-#        args:
-#            menu_type: admin_main_menu
-#            file: ${app_dir}/config/data/Light_Kit_Admin_UserData/bmenu/generated/kit_admin_user_data.admin_mainmenu_1.byml
-#            path: lka-admin
+
         
     
 
@@ -81,17 +75,14 @@ $bmenu.methods_collection:
 #            menu_type: admin_main_menu
 #            file: ${app_dir}/config/data/Light_Kit_Admin_UserData/bmenu/generated/kit_admin_user_data.admin_mainmenu_1.byml
 #            path: lka-admin
-$controller_hub.methods_collection: 
-    - 
-        method: registerHandler
-        args: 
-            plugin: Light_Kit_Admin_UserData
-            handler: 
-                instance: Ling\Light_Kit_Admin_UserData\ControllerHub\LightKitAdminUserDataControllerHubHandler
-                methods: 
-                    setContainer: 
-                        container: @container()
-                    
+#    -
+#        method: addDirectItemsByFileAndParentPath
+#        args:
+#            menu_type: admin_main_menu
+#            file: ${app_dir}/config/data/Light_Kit_Admin_UserData/bmenu/generated/kit_admin_user_data.admin_mainmenu_1.byml
+#            path: lka-admin
+
+
                 
             
         
@@ -171,7 +162,6 @@ $user_row_restriction.methods_collection:
         
     
 
-
 ```
 
 
@@ -179,6 +169,10 @@ $user_row_restriction.methods_collection:
 History Log
 =============
 
+- 1.7.3 -- 2020-12-01
+
+    - update to accommodate latest Light_ControllerHub api  
+    
 - 1.7.2 -- 2020-11-27
 
     - update to accommodate latest Light_Kit api  

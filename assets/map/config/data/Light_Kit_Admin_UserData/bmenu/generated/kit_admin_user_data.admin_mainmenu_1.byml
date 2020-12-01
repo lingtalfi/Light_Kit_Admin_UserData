@@ -10,7 +10,7 @@
             text: Tag
             route: lch_route-hub
             route_url_params: 
-                plugin: Light_Kit_Admin_UserData
+                plugin: Ling/Light_Kit_Admin_UserData
                 controller: Generated/LudaTagController
             
             _right: Light_Kit_Admin.user
@@ -22,7 +22,7 @@
             text: Resource
             route: lch_route-hub
             route_url_params: 
-                plugin: Light_Kit_Admin_UserData
+                plugin: Ling/Light_Kit_Admin_UserData
                 controller: Generated/LudaResourceController
             
             _right: Light_Kit_Admin.user
@@ -34,7 +34,7 @@
             text: Resource/Tag
             route: lch_route-hub
             route_url_params: 
-                plugin: Light_Kit_Admin_UserData
+                plugin: Ling/Light_Kit_Admin_UserData
                 controller: Generated/LudaResourceHasTagController
             
             _right: Light_Kit_Admin.user
@@ -46,7 +46,7 @@
             text: Resource file
             route: lch_route-hub
             route_url_params: 
-                plugin: Light_Kit_Admin_UserData
+                plugin: Ling/Light_Kit_Admin_UserData
                 controller: Generated/LudaResourceFileController
             
             _right: Light_Kit_Admin.user

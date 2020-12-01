@@ -193,7 +193,7 @@ rendering:
                         text: Edit
                         url_params_add_ric: true
                         url_params: 
-                            plugin: Light_Kit_Admin_UserData
+                            plugin: Ling/Light_Kit_Admin_UserData
                             controller: Generated/LudaResourceHasTagController
                             m: f
                         
@@ -245,7 +245,7 @@ rendering:
                     id: resource_id
                 
                 url_params: 
-                    plugin: %{plugin}
+                    plugin: Ling/Light_Kit_Admin_UserData
                     controller: Generated/LudaResourceController
                     m: f
                 
@@ -257,7 +257,7 @@ rendering:
                     id: tag_id
                 
                 url_params: 
-                    plugin: %{plugin}
+                    plugin: Ling/Light_Kit_Admin_UserData
                     controller: Generated/LudaTagController
                     m: f
                 
@@ -271,7 +271,7 @@ rendering:
     related_links: 
         - 
             text: "Add new \"resource has tag\" item"
-            url: REALIST(Light_Realist, route, lch_route-hub, {plugin: Light_Kit_Admin_UserData, controller: Generated/LudaResourceHasTagController, m:f})
+            url: REALIST(Light_Realist, route, lch_route-hub, {plugin: Ling/Light_Kit_Admin_UserData, controller: Generated/LudaResourceHasTagController, m:f})
             icon: fas fa-plus-circle
         
     

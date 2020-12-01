@@ -4,7 +4,7 @@
 
 The UserFileManagerController class
 ================
-2020-02-28 --> 2020-11-27
+2020-02-28 --> 2020-12-01
 
 
 
@@ -92,4 +92,4 @@ See the source code of [Ling\Light_Kit_Admin_UserData\Controller\User\UserFileMa
 
 SeeAlso
 ==============
-Previous class: [LudaTagController](https://github.com/lingtalfi/Light_Kit_Admin_UserData/blob/master/doc/api/Ling/Light_Kit_Admin_UserData/Controller/Generated/LudaTagController.md)<br>Next class: [LightKitAdminUserDataControllerHubHandler](https://github.com/lingtalfi/Light_Kit_Admin_UserData/blob/master/doc/api/Ling/Light_Kit_Admin_UserData/ControllerHub/Generated/LightKitAdminUserDataControllerHubHandler.md)<br>
+Previous class: [LudaTagController](https://github.com/lingtalfi/Light_Kit_Admin_UserData/blob/master/doc/api/Ling/Light_Kit_Admin_UserData/Controller/Generated/LudaTagController.md)<br>Next class: [LightKitAdminUserDataException](https://github.com/lingtalfi/Light_Kit_Admin_UserData/blob/master/doc/api/Ling/Light_Kit_Admin_UserData/Exception/LightKitAdminUserDataException.md)<br>

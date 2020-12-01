@@ -4,7 +4,7 @@
 
 The LightKitAdminUserDataRowRestrictionHandler class
 ================
-2020-02-28 --> 2020-11-27
+2020-02-28 --> 2020-12-01
 
 
 

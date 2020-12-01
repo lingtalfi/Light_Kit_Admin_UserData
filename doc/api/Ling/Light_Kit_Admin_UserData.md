@@ -1,6 +1,6 @@
 Ling/Light_Kit_Admin_UserData
 ================
-2020-02-28 --> 2020-11-27
+2020-02-28 --> 2020-12-01
 
 
 
@@ -63,14 +63,6 @@ Table of contents
     - LightKitAdminController::setRoute &ndash; Sets the matching route to this controller instance.
     - LightKitAdminController::renderPage &ndash; Renders the given page using the [kit service](https://github.com/lingtalfi/Light_Kit).
     - LightController::setLight &ndash; Sets the light instance.
-- [LightKitAdminUserDataControllerHubHandler](https://github.com/lingtalfi/Light_Kit_Admin_UserData/blob/master/doc/api/Ling/Light_Kit_Admin_UserData/ControllerHub/Generated/LightKitAdminUserDataControllerHubHandler.md) &ndash; The LightKitAdminUserDataControllerHubHandler class.
-    - [LightKitAdminUserDataControllerHubHandler::handle](https://github.com/lingtalfi/Light_Kit_Admin_UserData/blob/master/doc/api/Ling/Light_Kit_Admin_UserData/ControllerHub/Generated/LightKitAdminUserDataControllerHubHandler/handle.md) &ndash; Process the given controllerIdentifier and returns an appropriate http response.
-    - LightBaseControllerHubHandler::__construct &ndash; Builds the LightKitAdminControllerHubHandler instance.
-    - LightBaseControllerHubHandler::setContainer &ndash; Sets the container.
-- [LightKitAdminUserDataControllerHubHandler](https://github.com/lingtalfi/Light_Kit_Admin_UserData/blob/master/doc/api/Ling/Light_Kit_Admin_UserData/ControllerHub/LightKitAdminUserDataControllerHubHandler.md) &ndash; The LightKitAdminUserDataControllerHubHandler class.
-    - [LightKitAdminUserDataControllerHubHandler::handle](https://github.com/lingtalfi/Light_Kit_Admin_UserData/blob/master/doc/api/Ling/Light_Kit_Admin_UserData/ControllerHub/LightKitAdminUserDataControllerHubHandler/handle.md) &ndash; Process the given controllerIdentifier and returns an appropriate http response.
-    - LightBaseControllerHubHandler::__construct &ndash; Builds the LightKitAdminControllerHubHandler instance.
-    - LightBaseControllerHubHandler::setContainer &ndash; Sets the container.
 - [LightKitAdminUserDataException](https://github.com/lingtalfi/Light_Kit_Admin_UserData/blob/master/doc/api/Ling/Light_Kit_Admin_UserData/Exception/LightKitAdminUserDataException.md) &ndash; The LightKitAdminUserDataException class.
 - [LightKitAdminUserDataLkaPlugin](https://github.com/lingtalfi/Light_Kit_Admin_UserData/blob/master/doc/api/Ling/Light_Kit_Admin_UserData/LightKitAdminPlugin/Generated/LightKitAdminUserDataLkaPlugin.md) &ndash; The LightKitAdminUserDataLkaPlugin class.
     - BaseLightKitAdminPlugin::__construct &ndash; Builds the BaseLightKitAdminPlugin instance.
@@ -80,6 +72,10 @@ Table of contents
     - BaseLightKitAdminPlugin::__construct &ndash; Builds the BaseLightKitAdminPlugin instance.
     - BaseLightKitAdminPlugin::getPluginOptions &ndash; Returns the options of this kit admin plugin.
     - BaseLightKitAdminPlugin::setOptionsFile &ndash; Sets the file.
+- [LightKitAdminUserDataControllerHubHandler](https://github.com/lingtalfi/Light_Kit_Admin_UserData/blob/master/doc/api/Ling/Light_Kit_Admin_UserData/Light_ControllerHub/Generated/LightKitAdminUserDataControllerHubHandler.md) &ndash; The LightKitAdminUserDataControllerHubHandler class.
+    - [LightKitAdminUserDataControllerHubHandler::handle](https://github.com/lingtalfi/Light_Kit_Admin_UserData/blob/master/doc/api/Ling/Light_Kit_Admin_UserData/Light_ControllerHub/Generated/LightKitAdminUserDataControllerHubHandler/handle.md) &ndash; Process the given controllerIdentifier and returns an appropriate http response.
+    - LightBaseControllerHubHandler::__construct &ndash; Builds the LightKitAdminControllerHubHandler instance.
+    - LightBaseControllerHubHandler::setContainer &ndash; Sets the light service container interface.
 - [LightKitAdminUserDataDuplicator](https://github.com/lingtalfi/Light_Kit_Admin_UserData/blob/master/doc/api/Ling/Light_Kit_Admin_UserData/Light_Kit_Admin/Duplicator/LightKitAdminUserDataDuplicator.md) &ndash; The LightKitAdminUserDataDuplicator class.
     - [LightKitAdminUserDataDuplicator::onInsertAfter](https://github.com/lingtalfi/Light_Kit_Admin_UserData/blob/master/doc/api/Ling/Light_Kit_Admin_UserData/Light_Kit_Admin/Duplicator/LightKitAdminUserDataDuplicator/onInsertAfter.md) &ndash; Is executed after a row is duplicated.
 - [LightKitAdminUserDataRowRestrictionHandler](https://github.com/lingtalfi/Light_Kit_Admin_UserData/blob/master/doc/api/Ling/Light_Kit_Admin_UserData/Light_UserRowRestriction/LightKitAdminUserDataRowRestrictionHandler.md) &ndash; The LightKitAdminUserDataRowRestrictionHandler class.

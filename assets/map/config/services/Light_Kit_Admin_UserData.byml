@@ -32,17 +32,8 @@ $bmenu.methods_collection:
 #            menu_type: admin_main_menu
 #            file: ${app_dir}/config/data/Light_Kit_Admin_UserData/bmenu/generated/kit_admin_user_data.admin_mainmenu_1.byml
 #            path: lka-admin
-$controller_hub.methods_collection: 
-    - 
-        method: registerHandler
-        args: 
-            plugin: Light_Kit_Admin_UserData
-            handler: 
-                instance: Ling\Light_Kit_Admin_UserData\ControllerHub\LightKitAdminUserDataControllerHubHandler
-                methods: 
-                    setContainer: 
-                        container: @container()
-                    
+
+
                 
             
         
