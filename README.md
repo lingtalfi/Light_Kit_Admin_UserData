@@ -169,6 +169,10 @@ $user_row_restriction.methods_collection:
 History Log
 =============
 
+- 1.7.5 -- 2020-12-08
+
+    - Fix lpi-deps not using natsort.
+
 - 1.7.4 -- 2020-12-04
 
     - Add lpi-deps.byml file
