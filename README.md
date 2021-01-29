@@ -1,6 +1,6 @@
 Light_Kit_Admin_UserData
 ===========
-2020-02-28 -> 2020-12-01
+2020-02-28 -> 2021-01-29
 
 
 
@@ -124,15 +124,7 @@ $micro_permission.methods_collection:
         args: 
             file: ${app_dir}/config/data/Light_Kit_Admin_UserData/Light_MicroPermission/kit_admin_user_data.profile.generated.byml
         
-    
 
-$plugin_installer.methods_collection: 
-    - 
-        method: registerPlugin
-        args: 
-            plugin: Light_Kit_Admin_UserData
-            installer: @service(kit_admin_user_data)
-        
     
 
 #$realform.methods_collection:
@@ -169,9 +161,13 @@ $user_row_restriction.methods_collection:
 History Log
 =============
 
+- 1.7.6 -- 2021-01-29
+
+    - adapt to work with new Light_PluginInstaller api
+
 - 1.7.5 -- 2020-12-08
 
-    - Fix lpi-deps not using natsort.
+    - Fix lpi-deps not using natsort
 
 - 1.7.4 -- 2020-12-04
 
