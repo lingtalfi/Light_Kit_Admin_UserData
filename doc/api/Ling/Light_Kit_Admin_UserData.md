@@ -1,6 +1,6 @@
 Ling/Light_Kit_Admin_UserData
 ================
-2020-02-28 --> 2021-01-29
+2020-02-28 --> 2021-02-23
 
 
 
@@ -91,14 +91,18 @@ Table of contents
     - ZephyrTemplateEngine::setDirectory &ndash; Sets the directory.
 - [LightKitAdminUserDataDuplicator](https://github.com/lingtalfi/Light_Kit_Admin_UserData/blob/master/doc/api/Ling/Light_Kit_Admin_UserData/Light_Kit_Admin/Duplicator/LightKitAdminUserDataDuplicator.md) &ndash; The LightKitAdminUserDataDuplicator class.
     - [LightKitAdminUserDataDuplicator::onInsertAfter](https://github.com/lingtalfi/Light_Kit_Admin_UserData/blob/master/doc/api/Ling/Light_Kit_Admin_UserData/Light_Kit_Admin/Duplicator/LightKitAdminUserDataDuplicator/onInsertAfter.md) &ndash; Is executed after a row is duplicated.
+- [LightKitAdminUserDataPlanetInstaller](https://github.com/lingtalfi/Light_Kit_Admin_UserData/blob/master/doc/api/Ling/Light_Kit_Admin_UserData/Light_PlanetInstaller/LightKitAdminUserDataPlanetInstaller.md) &ndash; The LightKitAdminUserDataPlanetInstaller class.
+    - [LightKitAdminUserDataPlanetInstaller::onMapCopyAfter](https://github.com/lingtalfi/Light_Kit_Admin_UserData/blob/master/doc/api/Ling/Light_Kit_Admin_UserData/Light_PlanetInstaller/LightKitAdminUserDataPlanetInstaller/onMapCopyAfter.md) &ndash; This hook is executed during an [install](https://github.com/lingtalfi/TheBar/blob/master/discussions/import-install.md#summary).
+    - LightBasePlanetInstaller::__construct &ndash; Builds the LightBasePlanetInstaller instance.
+    - LightBasePlanetInstaller::setContainer &ndash; Sets the light service container interface.
 - [LightKitAdminUserDataPluginInstaller](https://github.com/lingtalfi/Light_Kit_Admin_UserData/blob/master/doc/api/Ling/Light_Kit_Admin_UserData/Light_PluginInstaller/LightKitAdminUserDataPluginInstaller.md) &ndash; The LightKitAdminUserDataPluginInstaller class.
     - LightKitAdminBasePortPluginInstallerWithDatabase::__construct &ndash; Builds the LightKitAdminBasePluginInstallerWithDatabase instance.
     - LightKitAdminBasePortPluginInstallerWithDatabase::install &ndash; Installs the plugin in the light application.
     - LightKitAdminBasePortPluginInstallerWithDatabase::isInstalled &ndash; Returns whether the core install phase of the plugin is fully completed.
     - LightKitAdminBasePortPluginInstallerWithDatabase::uninstall &ndash; Uninstalls the plugin.
     - LightKitAdminBasePortPluginInstallerWithDatabase::getDependencies &ndash; Returns the array of dependencies.
-    - LightBasePluginInstaller::setContainer &ndash; Sets the container.
-    - LightBasePluginInstaller::getTableScope &ndash; Returns the [table scope](https://github.com/lingtalfi/TheBar/blob/master/discussions/table-scope.md) for this planet.
+    - LightUserDatabaseBasePluginInstaller::setContainer &ndash; Sets the container.
+    - LightUserDatabaseBasePluginInstaller::getTableScope &ndash; Returns the [table scope](https://github.com/lingtalfi/TheBar/blob/master/discussions/table-scope.md) for this planet.
 - [LightKitAdminUserDataRowRestrictionHandler](https://github.com/lingtalfi/Light_Kit_Admin_UserData/blob/master/doc/api/Ling/Light_Kit_Admin_UserData/Light_UserRowRestriction/LightKitAdminUserDataRowRestrictionHandler.md) &ndash; The LightKitAdminUserDataRowRestrictionHandler class.
     - [LightKitAdminUserDataRowRestrictionHandler::__construct](https://github.com/lingtalfi/Light_Kit_Admin_UserData/blob/master/doc/api/Ling/Light_Kit_Admin_UserData/Light_UserRowRestriction/LightKitAdminUserDataRowRestrictionHandler/__construct.md) &ndash; Builds the LightUserDataRowRestrictionHandler instance.
     - [LightKitAdminUserDataRowRestrictionHandler::setContainer](https://github.com/lingtalfi/Light_Kit_Admin_UserData/blob/master/doc/api/Ling/Light_Kit_Admin_UserData/Light_UserRowRestriction/LightKitAdminUserDataRowRestrictionHandler/setContainer.md) &ndash; Sets the container.
@@ -111,20 +115,23 @@ Table of contents
 
 Dependencies
 ============
+- [BabyYaml](https://github.com/lingtalfi/BabyYaml)
 - [Bat](https://github.com/lingtalfi/Bat)
 - [Chloroform](https://github.com/lingtalfi/Chloroform)
-- [Light](https://github.com/lingtalfi/Light)
-- [Light_Kit_Admin](https://github.com/lingtalfi/Light_Kit_Admin)
-- [Light_Realform](https://github.com/lingtalfi/Light_Realform)
-- [Light_Kit](https://github.com/lingtalfi/Light_Kit)
-- [Light_ControllerHub](https://github.com/lingtalfi/Light_ControllerHub)
+- [CliTools](https://github.com/lingtalfi/CliTools)
 - [Kit_PicassoWidget](https://github.com/lingtalfi/Kit_PicassoWidget)
-- [Light_UserRowRestriction](https://github.com/lingtalfi/Light_UserRowRestriction)
-- [Light_User](https://github.com/lingtalfi/Light_User)
-- [BabyYaml](https://github.com/lingtalfi/BabyYaml)
+- [Light](https://github.com/lingtalfi/Light)
 - [Light_BMenu](https://github.com/lingtalfi/Light_BMenu)
+- [Light_ControllerHub](https://github.com/lingtalfi/Light_ControllerHub)
+- [Light_EasyRoute](https://github.com/lingtalfi/Light_EasyRoute)
+- [Light_Kit](https://github.com/lingtalfi/Light_Kit)
+- [Light_Kit_Admin](https://github.com/lingtalfi/Light_Kit_Admin)
+- [Light_PlanetInstaller](https://github.com/lingtalfi/Light_PlanetInstaller)
 - [Light_PluginInstaller](https://github.com/lingtalfi/Light_PluginInstaller)
+- [Light_Realform](https://github.com/lingtalfi/Light_Realform)
+- [Light_User](https://github.com/lingtalfi/Light_User)
 - [Light_UserDatabase](https://github.com/lingtalfi/Light_UserDatabase)
+- [Light_UserRowRestriction](https://github.com/lingtalfi/Light_UserRowRestriction)
 - [SimplePdoWrapper](https://github.com/lingtalfi/SimplePdoWrapper)
 
 

@@ -1,6 +1,6 @@
 Light_Kit_Admin_UserData
 ===========
-2020-02-28 -> 2021-01-29
+2020-02-28 -> 2021-02-23
 
 
 
@@ -85,14 +85,7 @@ $bmenu.methods_collection:
 
                 
             
-        
     
-
-$easy_route.methods_collection: 
-    - 
-        method: registerBundleFile
-        args: 
-            file: config/data/Light_Kit_Admin_UserData/Light_EasyRoute/lka_userdata_routes.byml
         
     
 
@@ -161,6 +154,10 @@ $user_row_restriction.methods_collection:
 History Log
 =============
 
+- 1.7.7 -- 2021-02-23
+
+    - switch to Light_EasyRoute open registration system
+  
 - 1.7.6 -- 2021-01-29
 
     - adapt to work with new Light_PluginInstaller api
