@@ -1,6 +1,6 @@
 Light_Kit_Admin_UserData
 ===========
-2020-02-28 -> 2021-02-23
+2020-02-28 -> 2021-03-05
 
 
 
@@ -14,6 +14,11 @@ This is part of the [universe framework](https://github.com/karayabin/universe-s
 
 Install
 ==========
+Using the [planet installer](https://github.com/lingtalfi/Light_PlanetInstaller) via [light-cli](https://github.com/lingtalfi/Light_Cli)
+```bash
+lt install Ling.Light_Kit_Admin_UserData
+```
+
 Using the [uni](https://github.com/lingtalfi/universe-naive-importer) command.
 ```bash
 uni import Ling/Light_Kit_Admin_UserData
@@ -153,6 +158,10 @@ $user_row_restriction.methods_collection:
 
 History Log
 =============
+
+- 1.7.8 -- 2021-03-05
+
+    - update README.md, add install alternative
 
 - 1.7.7 -- 2021-02-23
 
