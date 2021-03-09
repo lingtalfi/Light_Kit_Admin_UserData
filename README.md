@@ -1,6 +1,6 @@
 Light_Kit_Admin_UserData
 ===========
-2020-02-28 -> 2021-03-05
+2020-02-28 -> 2021-03-09
 
 
 
@@ -159,6 +159,10 @@ $user_row_restriction.methods_collection:
 History Log
 =============
 
+- 1.7.9 -- 2021-03-09
+
+    - rename template dir to include galaxy name
+  
 - 1.7.8 -- 2021-03-05
 
     - update README.md, add install alternative
