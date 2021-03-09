@@ -159,6 +159,10 @@ $user_row_restriction.methods_collection:
 History Log
 =============
 
+- 1.7.10 -- 2021-03-09
+
+    - update planet to adapt Ling.Light_Kit_Admin:0.12.25
+  
 - 1.7.9 -- 2021-03-09
 
     - rename template dir to include galaxy name
