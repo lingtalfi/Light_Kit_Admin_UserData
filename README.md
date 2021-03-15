@@ -1,6 +1,6 @@
 Light_Kit_Admin_UserData
 ===========
-2020-02-28 -> 2021-03-09
+2020-02-28 -> 2021-03-15
 
 
 
@@ -78,13 +78,13 @@ $bmenu.methods_collection:
 #        method: addDirectItemsByFileAndParentPath
 #        args:
 #            menu_type: admin_main_menu
-#            file: ${app_dir}/config/data/Light_Kit_Admin_UserData/bmenu/generated/kit_admin_user_data.admin_mainmenu_1.byml
+#            file: ${app_dir}/config/data/Ling.Light_Kit_Admin_UserData/Ling.Light_BMenu/generated/kit_admin_user_data.admin_mainmenu_1.byml
 #            path: lka-admin
 #    -
 #        method: addDirectItemsByFileAndParentPath
 #        args:
 #            menu_type: admin_main_menu
-#            file: ${app_dir}/config/data/Light_Kit_Admin_UserData/bmenu/generated/kit_admin_user_data.admin_mainmenu_1.byml
+#            file: ${app_dir}/config/data/Ling.Light_Kit_Admin_UserData/Ling.Light_BMenu/generated/kit_admin_user_data.admin_mainmenu_1.byml
 #            path: lka-admin
 
 
@@ -103,7 +103,7 @@ $kit_admin.methods_collection:
                 instance: Ling\Light_Kit_Admin_UserData\LightKitAdminPlugin\LightKitAdminUserDataLkaPlugin
                 methods: 
                     setOptionsFile: 
-                        file: ${app_dir}/config/data/Light_Kit_Admin_UserData/Light_Kit_Admin/lka-options.byml
+                        file: ${app_dir}/config/data/Ling.Light_Kit_Admin_UserData/Light_Kit_Admin/lka-options.byml
                     
                 
             
@@ -114,13 +114,13 @@ $micro_permission.methods_collection:
     - 
         method: registerMicroPermissionsByFile
         args: 
-            file: ${app_dir}/config/data/Light_Kit_Admin_UserData/Light_MicroPermission/lka_userdata-micro-permissions.byml
+            file: ${app_dir}/config/data/Ling.Light_Kit_Admin_UserData/Light_MicroPermission/lka_userdata-micro-permissions.byml
         
     
     - 
         method: registerMicroPermissionsByProfile
         args: 
-            file: ${app_dir}/config/data/Light_Kit_Admin_UserData/Light_MicroPermission/kit_admin_user_data.profile.generated.byml
+            file: ${app_dir}/config/data/Ling.Light_Kit_Admin_UserData/Ling.Light_MicroPermission/kit_admin_user_data.profile.generated.byml
         
 
     
@@ -134,7 +134,7 @@ $micro_permission.methods_collection:
 #                instance: Ling\Light_Kit_Admin\Realform\Handler\LightKitAdminRealformHandler
 #                methods:
 #                    setConfDir:
-#                        dir: ${app_dir}/config/data/Light_Kit_Admin_UserData/Light_Realform
+#                        dir: ${app_dir}/config/data/Ling.Light_Kit_Admin_UserData/Light_Realform
 #
 $user_row_restriction.methods_collection: 
     - 
@@ -158,6 +158,10 @@ $user_row_restriction.methods_collection:
 
 History Log
 =============
+
+- 1.7.11 -- 2021-03-15
+
+    - update planet to adapt Ling.Light:0.70.0
 
 - 1.7.10 -- 2021-03-09
 

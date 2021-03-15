@@ -57,7 +57,7 @@ class LightKitAdminUserDataService implements BMenuDirectInjectorInterface
     {
 
         $appDir = $this->container->getApplicationDir();
-        $allItems = BabyYamlUtil::readFile($appDir . "/config/data/Light_Kit_Admin_UserData/bmenu/admin_main_menu-items.byml");
+        $allItems = BabyYamlUtil::readFile($appDir . "/config/data/Ling.Light_Kit_Admin_UserData/Ling.Light_BMenu/admin_main_menu-items.byml");
         $userItems = $allItems['user'];
         $adminItems = $allItems['admin'];
 
