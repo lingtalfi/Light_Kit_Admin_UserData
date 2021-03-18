@@ -13,7 +13,7 @@
                 plugin: Ling/Light_Kit_Admin_UserData
                 controller: Generated/LudaTagController
             
-            _right: Ling.Light_Kit_Admin.user
+            _right: Ling.Light_Kit_Admin.admin
             children: []
         
         - 
@@ -25,7 +25,7 @@
                 plugin: Ling/Light_Kit_Admin_UserData
                 controller: Generated/LudaResourceController
             
-            _right: Ling.Light_Kit_Admin.user
+            _right: Ling.Light_Kit_Admin.admin
             children: []
         
         - 
@@ -37,7 +37,7 @@
                 plugin: Ling/Light_Kit_Admin_UserData
                 controller: Generated/LudaResourceHasTagController
             
-            _right: Ling.Light_Kit_Admin.user
+            _right: Ling.Light_Kit_Admin.admin
             children: []
         
         - 
@@ -49,7 +49,7 @@
                 plugin: Ling/Light_Kit_Admin_UserData
                 controller: Generated/LudaResourceFileController
             
-            _right: Ling.Light_Kit_Admin.user
+            _right: Ling.Light_Kit_Admin.admin
             children: []
         
     

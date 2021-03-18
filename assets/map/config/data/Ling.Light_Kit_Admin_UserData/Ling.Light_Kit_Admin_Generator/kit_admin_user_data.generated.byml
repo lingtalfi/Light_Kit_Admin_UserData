@@ -561,7 +561,7 @@ menu:
     prefix_to_rights:
         # Note: in this case, the Light_Database doesn't provide any permission group, so we use
         # the permissions provided by light kit admin
-        !{prefix}: Ling.Light_Kit_Admin.user
+        !{prefix}: Ling.Light_Kit_Admin.admin
 
 
     # An array of has keyword => has label.
