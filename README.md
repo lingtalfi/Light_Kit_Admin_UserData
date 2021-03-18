@@ -123,6 +123,10 @@ History Log
 =============
 
 
+- 1.7.14 -- 2021-03-18
+
+  - fix service config using undesirable bmenu snippet
+  
 - 1.7.13 -- 2021-03-18
 
   - fix bmenu items not requiring admin rights
