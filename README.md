@@ -1,6 +1,6 @@
 Light_Kit_Admin_UserData
 ===========
-2020-02-28 -> 2021-03-15
+2020-02-28 -> 2021-03-18
 
 
 
@@ -63,68 +63,6 @@ kit_admin_user_data:
 # --------------------------------------
 # hooks
 # --------------------------------------
-$bmenu.methods_collection: 
-    - 
-        method: addDirectInjector
-        args: 
-            menuType: admin_main_menu
-            injector: @service(kit_admin_user_data)
-        
-
-        
-    
-
-#    -
-#        method: addDirectItemsByFileAndParentPath
-#        args:
-#            menu_type: admin_main_menu
-#            file: ${app_dir}/config/data/Ling.Light_Kit_Admin_UserData/Ling.Light_BMenu/generated/kit_admin_user_data.admin_mainmenu_1.byml
-#            path: lka-admin
-#    -
-#        method: addDirectItemsByFileAndParentPath
-#        args:
-#            menu_type: admin_main_menu
-#            file: ${app_dir}/config/data/Ling.Light_Kit_Admin_UserData/Ling.Light_BMenu/generated/kit_admin_user_data.admin_mainmenu_1.byml
-#            path: lka-admin
-
-
-                
-            
-    
-        
-    
-
-$kit_admin.methods_collection: 
-    - 
-        method: registerPlugin
-        args: 
-            pluginName: Light_Kit_Admin_UserData
-            plugin: 
-                instance: Ling\Light_Kit_Admin_UserData\LightKitAdminPlugin\LightKitAdminUserDataLkaPlugin
-                methods: 
-                    setOptionsFile: 
-                        file: ${app_dir}/config/data/Ling.Light_Kit_Admin_UserData/Light_Kit_Admin/lka-options.byml
-                    
-                
-            
-        
-    
-
-$micro_permission.methods_collection: 
-    - 
-        method: registerMicroPermissionsByFile
-        args: 
-            file: ${app_dir}/config/data/Ling.Light_Kit_Admin_UserData/Light_MicroPermission/lka_userdata-micro-permissions.byml
-        
-    
-    - 
-        method: registerMicroPermissionsByProfile
-        args: 
-            file: ${app_dir}/config/data/Ling.Light_Kit_Admin_UserData/Ling.Light_MicroPermission/kit_admin_user_data.profile.generated.byml
-        
-
-    
-
 #$realform.methods_collection:
 #    -
 #        method: registerFormHandler
@@ -152,6 +90,31 @@ $user_row_restriction.methods_collection:
         
     
 
+$micro_permission.methods_collection: 
+    - 
+        method: registerMicroPermissionsByProfile
+        args: 
+            file: ${app_dir}/config/data/Ling.Light_Kit_Admin_UserData/Ling.Light_MicroPermission/kit_admin_user_data.profile.generated.byml
+        
+    
+
+$kit_admin.methods_collection: 
+    - 
+        method: registerPlugin
+        args: 
+            pluginName: Light_Kit_Admin_UserData
+            plugin: 
+                instance: Ling\Light_Kit_Admin_UserData\LightKitAdminPlugin\Generated\LightKitAdminUserDataLkaPlugin
+                methods: 
+                    setOptionsFile: 
+                        file: ${app_dir}/config/data/Ling.Light_Kit_Admin_UserData/Ling.Light_Kit_Admin/lka-options.generated.byml
+                    
+                
+            
+        
+      
+    
+
 ```
 
 
@@ -159,6 +122,11 @@ $user_row_restriction.methods_collection:
 History Log
 =============
 
+
+- 1.7.12 -- 2021-03-18
+
+  - update planet to adapt Ling.Light_BMenu:2.0.0
+  
 - 1.7.11 -- 2021-03-15
 
     - update planet to adapt Ling.Light:0.70.0
