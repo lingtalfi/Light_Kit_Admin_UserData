@@ -1,6 +1,6 @@
 Light_Kit_Admin_UserData
 ===========
-2020-02-28 -> 2021-03-18
+2020-02-28 -> 2021-03-23
 
 
 
@@ -123,6 +123,10 @@ History Log
 =============
 
 
+- 1.7.15 -- 2021-03-23
+
+  - adapt api to Ling.Light_Realist:2.0.15
+  
 - 1.7.14 -- 2021-03-18
 
   - fix service config using undesirable bmenu snippet
