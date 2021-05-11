@@ -123,6 +123,10 @@ History Log
 =============
 
 
+- 1.7.16 -- 2021-05-11
+
+    - Update dependencies to Ling.Light_EasyRoute (pushed by SubscribersUtil)
+
 - 1.7.15 -- 2021-03-23
 
   - adapt api to Ling.Light_Realist:2.0.15
