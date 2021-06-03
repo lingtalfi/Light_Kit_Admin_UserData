@@ -1,6 +1,6 @@
 Light_Kit_Admin_UserData
 ===========
-2020-02-28 -> 2021-05-31
+2020-02-28 -> 2021-06-03
 
 
 
@@ -122,6 +122,11 @@ $kit_admin.methods_collection:
 History Log
 =============
 
+
+- 1.7.19 -- 2021-06-03
+
+    - adapt api to work with Light_PlanetInstaller:2.0.4
+    - removed dependency to Light_PluginInstaller
 
 - 1.7.18 -- 2021-05-31
 

@@ -23,7 +23,7 @@ class LightKitAdminUserDataPlanetInstaller extends LightKitAdminBasePlanetInstal
     /**
      * @implementation
      */
-    public function init2(string $appDir, OutputInterface $output): void
+    public function init2(string $appDir, OutputInterface $output, array $options = []): void
     {
 
 
@@ -66,7 +66,7 @@ class LightKitAdminUserDataPlanetInstaller extends LightKitAdminBasePlanetInstal
     /**
      * @implementation
      */
-    public function undoInit2(string $appDir, OutputInterface $output): void
+    public function undoInit2(string $appDir, OutputInterface $output, array $options = []): void
     {
 
 
