@@ -57,50 +57,7 @@ kit_admin_user_data:
     methods: 
         setContainer: 
             container: @container()
-        
-    
-
-# --------------------------------------
-# hooks
-# --------------------------------------
-#$realform.methods_collection:
-#    -
-#        method: registerFormHandler
-#        args:
-#            plugin: Light_Kit_Admin_UserData
-#            handler:
-#                instance: Ling\Light_Kit_Admin\Realform\Handler\LightKitAdminRealformHandler
-#                methods:
-#                    setConfDir:
-#                        dir: ${app_dir}/config/data/Ling.Light_Kit_Admin_UserData/Light_Realform
-#
-$user_row_restriction.methods_collection: 
-    - 
-        method: registerRowRestrictionHandlerByTablePrefix
-        args: 
-            prefix: luda
-            handler: 
-                instance: Ling\Light_Kit_Admin_UserData\Light_UserRowRestriction\LightKitAdminUserDataRowRestrictionHandler
-                methods: 
-                    setContainer: 
-                        container: @container()
                     
-                
-            
-    
-$kit_admin.methods_collection: 
-    - 
-        method: registerPlugin
-        args: 
-            pluginName: Light_Kit_Admin_UserData
-            plugin: 
-                instance: Ling\Light_Kit_Admin_UserData\LightKitAdminPlugin\Generated\LightKitAdminUserDataLkaPlugin
-                methods: 
-                    setOptionsFile: 
-                        file: ${app_dir}/config/data/Ling.Light_Kit_Admin_UserData/Ling.Light_Kit_Admin/lka-options.generated.byml
-                    
-                
-            
         
       
     
@@ -113,6 +70,10 @@ History Log
 =============
 
 
+- 1.7.21 -- 2021-06-17
+
+    - checkpoint commit
+  
 - 1.7.20 -- 2021-06-17
 
     - switch to micro-permission open registration system
