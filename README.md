@@ -1,6 +1,6 @@
 Light_Kit_Admin_UserData
 ===========
-2020-02-28 -> 2021-06-03
+2020-02-28 -> 2021-06-17
 
 
 
@@ -87,17 +87,7 @@ $user_row_restriction.methods_collection:
                     
                 
             
-        
     
-
-$micro_permission.methods_collection: 
-    - 
-        method: registerMicroPermissionsByProfile
-        args: 
-            file: ${app_dir}/config/data/Ling.Light_Kit_Admin_UserData/Ling.Light_MicroPermission/kit_admin_user_data.profile.generated.byml
-        
-    
-
 $kit_admin.methods_collection: 
     - 
         method: registerPlugin
@@ -123,6 +113,10 @@ History Log
 =============
 
 
+- 1.7.20 -- 2021-06-17
+
+    - switch to micro-permission open registration system
+  
 - 1.7.19 -- 2021-06-03
 
     - adapt api to work with Light_PlanetInstaller:2.0.4

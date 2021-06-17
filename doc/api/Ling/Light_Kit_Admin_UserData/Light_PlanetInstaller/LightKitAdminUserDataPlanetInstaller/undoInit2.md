@@ -57,7 +57,7 @@ Returns void.
 
 Source Code
 ===========
-See the source code for method [LightKitAdminUserDataPlanetInstaller::undoInit2](https://github.com/lingtalfi/Light_Kit_Admin_UserData/blob/master/Light_PlanetInstaller/LightKitAdminUserDataPlanetInstaller.php#L69-L106)
+See the source code for method [LightKitAdminUserDataPlanetInstaller::undoInit2](https://github.com/lingtalfi/Light_Kit_Admin_UserData/blob/master/Light_PlanetInstaller/LightKitAdminUserDataPlanetInstaller.php#L71-L112)
 
 
 See Also

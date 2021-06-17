@@ -1,6 +1,6 @@
 Ling/Light_Kit_Admin_UserData
 ================
-2020-02-28 --> 2021-06-03
+2020-02-28 --> 2021-06-17
 
 
 
@@ -100,9 +100,9 @@ Table of contents
 - [LightKitAdminUserDataPlanetInstaller](https://github.com/lingtalfi/Light_Kit_Admin_UserData/blob/master/doc/api/Ling/Light_Kit_Admin_UserData/Light_PlanetInstaller/LightKitAdminUserDataPlanetInstaller.md) &ndash; The LightKitAdminUserDataPlanetInstaller class.
     - [LightKitAdminUserDataPlanetInstaller::init2](https://github.com/lingtalfi/Light_Kit_Admin_UserData/blob/master/doc/api/Ling/Light_Kit_Admin_UserData/Light_PlanetInstaller/LightKitAdminUserDataPlanetInstaller/init2.md) &ndash; Executes the init 2 phase of the install command.
     - [LightKitAdminUserDataPlanetInstaller::undoInit2](https://github.com/lingtalfi/Light_Kit_Admin_UserData/blob/master/doc/api/Ling/Light_Kit_Admin_UserData/Light_PlanetInstaller/LightKitAdminUserDataPlanetInstaller/undoInit2.md) &ndash; Undoes the init 2 phase.
+    - LightKitAdminBasePlanetInstaller::__construct &ndash; Builds the LightKitAdminBasePlanetInstaller instance.
     - LightKitAdminBasePlanetInstaller::init3 &ndash; Executes the init 3 phase of the install command.
     - LightKitAdminBasePlanetInstaller::undoInit3 &ndash; Undoes the init 3 phase.
-    - LightBasePlanetInstaller::__construct &ndash; Builds the LightBasePlanetInstaller instance.
     - LightBasePlanetInstaller::setContainer &ndash; Sets the light service container interface.
 - [LightKitAdminUserDataRowRestrictionHandler](https://github.com/lingtalfi/Light_Kit_Admin_UserData/blob/master/doc/api/Ling/Light_Kit_Admin_UserData/Light_UserRowRestriction/LightKitAdminUserDataRowRestrictionHandler.md) &ndash; The LightKitAdminUserDataRowRestrictionHandler class.
     - [LightKitAdminUserDataRowRestrictionHandler::__construct](https://github.com/lingtalfi/Light_Kit_Admin_UserData/blob/master/doc/api/Ling/Light_Kit_Admin_UserData/Light_UserRowRestriction/LightKitAdminUserDataRowRestrictionHandler/__construct.md) &ndash; Builds the LightUserDataRowRestrictionHandler instance.
