@@ -1,6 +1,6 @@
 Light_Kit_Admin_UserData
 ===========
-2020-02-28 -> 2021-06-17
+2020-02-28 -> 2021-06-18
 
 
 
@@ -69,6 +69,10 @@ kit_admin_user_data:
 History Log
 =============
 
+
+- 1.7.22 -- 2021-06-18
+
+    - update api to work with Ling.Light_Kit_Admin:0.13.0
 
 - 1.7.21 -- 2021-06-17
 
