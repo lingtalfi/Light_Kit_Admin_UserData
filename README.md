@@ -70,6 +70,10 @@ History Log
 =============
 
 
+- 1.7.23 -- 2021-06-18
+
+    - Update api to work with Ling.Light_Kit_Admin:0.13.3
+
 - 1.7.22 -- 2021-06-18
 
     - update api to work with Ling.Light_Kit_Admin:0.13.0
